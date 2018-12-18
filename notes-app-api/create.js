@@ -1,12 +1,11 @@
-import uuid from 'uuid';
-import * as dynamoDbLib from './libs/dynamo-lib';
-import { success, failure } from './libs/response-lib';
+import uuid from "uuid";
+import * as dynamoDbLib from "./libs/dynamodb-lib";
+import { success, failure } from "./libs/response-lib";
 
 export async function main(event, context) {
   const data = JSON.parse(event.body);
-
   const params = {
-    TableName: 'notes',
+    TableName: "notes",
     Item: {
       userId: event.requestContext.identity.cognitoIdentityId,
       noteId: uuid.v1(),
@@ -17,7 +16,7 @@ export async function main(event, context) {
   };
 
   try {
-    await dynamoDbLib.call('put', params);
+    await dynamoDbLib.call("put", params);
     return success(params.Item);
   } catch (e) {
     console.log(e);

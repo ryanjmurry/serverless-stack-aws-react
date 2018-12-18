@@ -1,7 +1,7 @@
 {
-  "body": "{\"content\":\"new world\", \"attachment\":\"new.jpg\"}",
+  "body": "{\"content\":\"new world\",\"attachment\":\"new.jpg\"}",
   "pathParameters": {
-    "id": "bfbf4090-00ba-11e9-bb30-11cd0ce1dc7f"
+    "id": "b8d18230-0253-11e9-8203-f14643581264"
   },
   "requestContext": {
     "identity": {
